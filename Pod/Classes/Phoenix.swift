@@ -262,7 +262,17 @@ public struct Phoenix {
       }
       callback()
     }
-    
+
+    public func disconnect() {
+        heartbeatTimer.invalidate()
+        reconnectTimer.invalidate()
+        sendBufferTimer.invalidate()
+
+        heartbeatTimer = NSTimer()
+        reconnectTimer = NSTimer()
+        sendBufferTimer = NSTimer()
+    }
+
     /**
      Initializes a 30s timer to let Phoenix know this device is still alive
      */
