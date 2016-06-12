@@ -271,6 +271,8 @@ public struct Phoenix {
         heartbeatTimer = NSTimer()
         reconnectTimer = NSTimer()
         sendBufferTimer = NSTimer()
+
+        close() {}
     }
 
     /**
