@@ -9,6 +9,13 @@
 import Foundation
 import Starscream
 
+extension Phoenix.Socket {
+    public func getSocket() -> WebSocket? {
+        return self.conn
+    }
+}
+
+
 public struct Phoenix {
   
   // MARK: Phoenix Message
